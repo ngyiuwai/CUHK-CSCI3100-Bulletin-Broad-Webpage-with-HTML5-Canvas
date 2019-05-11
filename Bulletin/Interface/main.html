@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Main</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="./JQuery/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="./JQuery/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- A border on the canvas helps us see the edges -->
+<style type="text/css">
+  #container { position: relative; }
+  #canvas { border: 1px solid #000; }
+</style> 
+<style type="text/css">
+.urlInput { width: 300px; }
+</style>
+<script type="text/javascript" src="./object_creation.js"></script>
+</head>
+<body onload="init0()">
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Bulletin</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="main.html" accesskey="1" title="Bulletin">Bulletin</a></li>
+				<li><a href="../accedit/acc_info.php" accesskey="2" title="Account Info">Account Info</a></li>
+                <li><a href="../logout/logout.php" accesskey="3" title="Log Out">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper">
+    <script type="text/javascript" src="./Kinetic/kinetic-v4.3.2-beta.js"></script>
+  
+  	//
+	<div id="dialog-form" title="Create Memo (Doule Click to Delete)">
+	  <p class="validateTips">All form fields are required.</p>
+	 
+	  <form>
+	  <fieldset>
+		<label for="title">Title</label>
+		<br><input type="text" name="title" id="title" class="text" />
+		<br><label for="content">Content</label>
+		<br><textarea name=address id="contentfield" rows=4 cols=40></textarea>
+	  </fieldset>
+	  </form>
+	</div>
+	 
+	<button id="create-meno">Create New Memo</button>
+	//
+	
+	//
+	<div id="picture-form" title="Create Picture (Doule Click to Delete)">
+	  <p class="validateTips">All form fields are required.</p>
+	 
+	  <form>
+	  <fieldset>
+		<label for="URL">Picture URL</label>
+		<br><input type="text" name="picURL" id="picURL" class="urlInput" />
+	  </fieldset>
+	  </form>
+	</div>
+	 
+	<button id="create-picture">Create New Picture</button>
+  	//
+  
+    <div id="container"></div>
+
+	<canvas id="canvas" width="1600" height="600"> 
+	</canvas> 
+	
+</div>
+	
+</body>
+</html>
